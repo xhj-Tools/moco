@@ -1,5 +1,0 @@
-[
-  {
-    "include" : "src/test/resources/settings/details/*.json"
-  }
-]

@@ -1,0 +1,111 @@
+[
+  {
+      "description": "不带参数的get请求",
+      "request": {
+          "uri": "/api/message/v1/list",
+          "method": "get"
+      },
+      "response": {
+          "text": "这是不带参数的get请求"
+      }
+  },
+  {
+    "description": "带参数的get请求，p1,p2分别的参数1，参数2，名称可随便起，个数也可随便加",
+    "request": {
+        "uri": "/api/message/v1/plist",
+        "method": "get",
+        "queries": {
+            "count": "10",
+            "sinceId": "0",
+            "maxId": "0"
+        }
+    },
+    "response": {
+        "text": "this is a get method with paramter"
+    }
+
+    },
+    {
+        "description": "带header的get请求",
+        "request": {
+            "uri": "/api/message/v1/hlist",
+            "method": "get",
+            "headers": {
+              "content-type": "application/json"
+            }
+          },
+            "response":{
+              "json":{
+                "message":"success header get list",
+                "status":"1"
+              }
+            }
+          
+    },
+    {
+        "description": "post 请求",
+        "request": {
+            "uri": "/postDemo",
+            "method": "post"
+        },
+        "response": {
+            "text": "这是不带参数的post请求"
+        }
+    },
+    {
+        "description": "带参数的post请求",
+        "request": {
+            "uri": "/1/api/t/v2/transfer/record",
+            "method": "post",
+            "forms": {
+                "page": "1",
+                "pageSize": "10"
+            }
+        },
+        "response":{
+            "text": "this is post request with param"
+        }
+  
+    },
+    {
+      "description":"这是一个带cookies的Post请求",
+      "request":{
+        "uri":"/postDemoWithCookies",
+        "cookies":{
+          "login":"true"
+        },
+        "json":{
+          "name":"hi",
+          "age":"3"
+        }
+      },
+      "response":{
+        "status":"200",
+        "json":{
+          "name":"success cookie",
+          "status":"1"
+        }
+      }
+    },
+    {
+        "description":"带header请求",
+        "request": {
+          "uri": "/withHeader",
+          "method": "post",
+          "headers": {
+            "content-type": "application/json"
+          },
+          "json": {
+            "name": "xiaoming",
+            "age": "18"
+          }
+        },
+          "response":{
+            "json":{
+              "message":"success header",
+              "status":"1"
+            }
+          }
+        }
+
+]

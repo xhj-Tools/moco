@@ -1,8 +1,0 @@
-[
-    {
-        "include" : "src/test/resources/settings/details/foo.json"
-    },
-    {
-        "include" : "src/test/resources/settings/details/bar.json"
-    }
-]
